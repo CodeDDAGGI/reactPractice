@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import * as s from "../styles/Navigeter";
 
 function Navigeter() {
-  const links = ['MainPage','SeachTodo','SeachTodoList'];
+  const links = [ 'mainpage' , 'searchtodo' , 'searchtodolist' ];
   const location = useLocation();
   const pathname = location.pathname;
   
