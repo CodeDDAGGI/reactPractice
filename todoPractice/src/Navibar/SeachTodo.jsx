@@ -14,17 +14,20 @@ function SeachTodo() {
   }
 
   const handleBlur = () => {
+    // if(setisInput === true){
+    //   setisInput(false)
+    // }
     setisInput(false);
   };
 
   const style = {
-    width: isInput? '350px' : '50px',
+    width: isInput? '500px' : '50px',
     transition: 'ease-in-out 0.5s',
   }
 
   return (
     <div css={s.search}>
-      <div className='search-maincon'>
+      <div css={s.searchCon} >
         <div className='search-con'>
           <div className='search-icon'>
             <input type="text" 
@@ -32,12 +35,13 @@ function SeachTodo() {
             style={style} 
             onBlur={handleBlur}
             ref={inputRef}
+            onClick={handleIconClick}
             />
             <label className='search-label' onClick={handleIconClick} ><FaSearch/></label>
           </div>
-          <div>
-            <button className='search-add'>추가</button>
-            <button className='search-btn'>조회</button>
+          <div className='con-btn'>
+            <button className='search-btn add-btn'>추가</button>
+            <button className='search-btn search-btn'>조회</button>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import * as s from "../styles/Navigeter";
 
 function Navigeter() {
-  const links = ['HOME','SeachTodo'];
+  const links = ['MainPage','SeachTodo','SeachTodoList'];
   
   return (
     <div css={s.nav} >
