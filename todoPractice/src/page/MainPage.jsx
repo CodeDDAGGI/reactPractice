@@ -1,6 +1,6 @@
 import React from 'react';
-import SeachTodo from '../Navibar/SeachTodo';
-import SeachTodoList from '../Navibar/SeachTodoList';
+import SeachTodo from '../component/SeachTodo';
+import SeachTodoList from '../component/SeachTodoList';
 
 function MainPage() {
     return (

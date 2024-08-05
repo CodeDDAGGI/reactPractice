@@ -1,10 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 /** @jsxImportSource @emotion/react */
 import * as s from "../styles/Navigeter";
 
 function Navigeter() {
   const links = ['MainPage','SeachTodo','SeachTodoList'];
+  const location = useLocation();
+  const pathname = location.pathname;
   
   return (
     <div css={s.nav} >
@@ -13,10 +15,11 @@ function Navigeter() {
           <NavLink
             key={link}
             to={link}
-            id='navi'
-            className={({ isActive }) => (isActive ? 'active': '')}
+            // id='navi'
+            // className={({ isActive }) => (isActive ? 'active': '')}
+            css={s.navButtonActive(link === pathname.slice(1))} 
             >
-              {link === '/' ? 'HOME' : link}
+              {link}
           </NavLink>
         ))
       }

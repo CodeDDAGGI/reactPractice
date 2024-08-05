@@ -16,14 +16,28 @@ export const nav = css`
 
   #navi{
     color: black;
-    &.active {
-    font-size: 24px;
-    color: green;
-  }
 
-  &:hover {
+    /* &.active {
+    font-size: 24px;
+    color: green;
+  } */
+
+  /* &:hover {
     color: green;
     font-size: 24px;
-  }
+  } */
   }
 `
+
+export const navButtonActive = (flag) => css`
+  color: ${flag ? "green" : "black"};
+`;
+//     color: black;
+
+//     &:active{
+//       color: green;
+//     }
+// `;
+// export const greenColor = css`
+//   color: green;
+// `;

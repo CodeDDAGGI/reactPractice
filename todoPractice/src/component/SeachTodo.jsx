@@ -5,39 +5,30 @@ import { FaSearch } from "react-icons/fa";
 
 function SeachTodo() {
 
-  const [isInput , setisInput] = useState(false);
+  const [ isInputFocus, setInputFocus ] = useState(false);
   const inputRef = useRef(null);
 
   const handleIconClick = () =>{
-    setisInput(!isInput);
+    setInputFocus(true);
     inputRef.current.focus();
   }
 
   const handleBlur = () => {
-    // if(setisInput === true){
-    //   setisInput(false)
-    // }
-    setisInput(false);
+    setInputFocus(false);
   };
-
-  const style = {
-    width: isInput? '500px' : '50px',
-    transition: 'ease-in-out 0.5s',
-  }
 
   return (
     <div css={s.search}>
       <div css={s.searchCon} >
-        <div className='search-con'>
-          <div className='search-icon'>
+        <div css={s.searchItemBox}>
+          <div css={s.searchIcon(isInputFocus)}>
+            <button css={s.searchIconButton} onClick={handleIconClick}><FaSearch/></button>
             <input type="text" 
-            className='search-input' 
-            style={style} 
-            onBlur={handleBlur}
-            ref={inputRef}
-            onClick={handleIconClick}
+              css={s.searchInput}
+              onBlur={handleBlur}
+              ref={inputRef}
+              onClick={handleIconClick}
             />
-            <label className='search-label' onClick={handleIconClick} ><FaSearch/></label>
           </div>
           <div className='con-btn'>
             <button className='search-btn add-btn'>추가</button>
