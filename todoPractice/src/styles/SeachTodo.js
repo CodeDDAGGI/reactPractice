@@ -43,27 +43,8 @@ export const searchCon = css`
     border: none;
   }
 
-  .con-btn {
-    display: flex;
-    justify-content: flex-end;
-  }
+  
 
-  .search-btn {
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-    &:hover {
-      background-color:#b3b0b0;
-    }
-
-    &:active {
-      background-color: #ccb8b8;
-    }
-  }
 
   .add-btn{
     margin-right: 20px;
@@ -116,4 +97,26 @@ export const searchInput = css`
 export const iconCss = css`
   outline: none;
   border: none;
+`
+
+export const searchbtn = css`
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color:#b3b0b0;
+  }
+
+  &:active {
+    background-color: #ccb8b8;
+  }
+`
+
+export const searchbtnContainer = css`
+    display: flex;
+    justify-content: flex-end;
 `

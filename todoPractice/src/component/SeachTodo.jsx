@@ -30,9 +30,9 @@ function SeachTodo() {
               onClick={handleIconClick}
             />
           </div>
-          <div className='con-btn'>
-            <button className='search-btn add-btn'>추가</button>
-            <button className='search-btn search-btn'>조회</button>
+          <div css={s.searchbtnContainer}>
+            <button css={s.searchbtn}>추가</button>
+            <button css={s.searchbtn}>조회</button>
           </div>
         </div>
       </div>

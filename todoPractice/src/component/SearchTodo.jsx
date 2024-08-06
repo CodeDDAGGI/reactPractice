@@ -19,6 +19,7 @@ function SearchTodo({todoList, getTodoList}) {
     inputRef.current.focus();
   }
 
+  // 추가
   const handleOnClick = () => {
     try {
       const response = api.post("todo");
@@ -28,6 +29,7 @@ function SearchTodo({todoList, getTodoList}) {
     }
   }
 
+  // 포커스 벗어날때
   const handleBlur = () => {
     setInputFocus(false);
   };
@@ -39,9 +41,10 @@ function SearchTodo({todoList, getTodoList}) {
     })
   }
 
-  const handleChange = (e) => {
-    
+  const handleSearchClick = () => {
+
   }
+
 
   return (
     <div css={s.search}>
@@ -59,8 +62,8 @@ function SearchTodo({todoList, getTodoList}) {
             />
           </div>
           <div css={s.btnContainer}>
-            <button css={s.botton} onClick={handleOnClick}>추가</button>
-            <button css={s.botton} onClick={handleChange}>조회</button>
+            <button css={s.botton} onChange={handleInputChange} onClick={handleOnClick}>추가</button>
+            <button css={s.botton} onClick={handleSearchClick}>조회</button>
           </div>
         </div>
       </div>
