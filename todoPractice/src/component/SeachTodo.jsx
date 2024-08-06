@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 /** @jsxImportSource @emotion/react */
 import * as s from "./../styles/SeachTodo";
 import { FaSearch } from "react-icons/fa";
@@ -12,6 +12,17 @@ function SeachTodo() {
     setInputFocus(true);
     inputRef.current.focus();
   }
+
+  // 
+  // useEffect(() => {
+  //   const loca = ["/login"]
+
+  //   if(!){
+  //     navigator("/login");
+  //   }else if(loca.include(location.pathname)){
+  //     navigator("/");
+  //   }
+  // }, [])
 
   const handleBlur = () => {
     setInputFocus(false);
